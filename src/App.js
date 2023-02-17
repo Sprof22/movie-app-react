@@ -94,15 +94,15 @@ function App() {
 
     const movieListFetch = fetch(
       `${OMDB_API_URL}/?s=${id}&apikey=${OMDB_API_KEY}`
-    )
-      .then((response) => response.json())
-      .then((response) => console.log(response, "this is the response"));
-  };
+    ).then(async(response) => {
+        const movieListResponse = await response.json()
+      })
+  }
   return (
     <div className="container-fluid full-page">
       <Search onSearchChange={handleOnSearchChange} />
       <div className="d-flex">
-        <MovieList movies={movies} />
+        <MovieList movieListResponse={movieListResponse} />
       </div>
     </div>
   );
