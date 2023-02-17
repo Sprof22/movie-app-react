@@ -22,9 +22,9 @@ const Search = ({onSearchChange}) => {
 	.catch(err => console.error(err));
   }
 
-  const handleOnChange = (searhData) => {
-    setSearch(searhData);
-    onSearchChange(searhData);
+  const handleOnChange = (searchData) => {
+    setSearch(searchData);
+    onSearchChange(searchData);
   };
   return (
     <AsyncPaginate
