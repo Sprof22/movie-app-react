@@ -27,9 +27,10 @@ const App = () => {
     
   return (
     <div className="container-fluid full-page">
-      <div className="row">
-        <div className="heading"></div>
-        <div className="search"><Search onSearchChange={handleOnSearchChange} /></div>
+      <div className="row d-flex justify-content-space between gap-3">
+      <div className="heading col-8 mt-2">Movie APP</div>
+      <div className="bg-danger col-4 m-0 mt-2"><Search /></div>
+      
       </div>
       <div className="d-flex">
         <MovieList movies={movies} />
