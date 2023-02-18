@@ -3,7 +3,7 @@ import { Accordion } from "react-accessible-accordion";
 import { AsyncPaginate } from "react-select-async-paginate";
 import { geoApiOptions, GEO_API_URL } from "../api";
 
-const Search = ({ onSearchChange }) => {
+const SearchAsync = ({ onSearchChange }) => {
   const [search, setSearch] = useState(null);
 
   const loadOptions = (inputValue) => {
@@ -37,4 +37,4 @@ const Search = ({ onSearchChange }) => {
   );
 };
 
-export default Search;
+export default SearchAsync;
