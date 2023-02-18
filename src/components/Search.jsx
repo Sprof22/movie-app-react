@@ -13,8 +13,8 @@ const Search = ({ onSearchChange }) => {
         return {
             options: response.d.map((movie)=> {
                 return {
-                    value: ``,
-                    label: ``,
+                    value: `${movie.l}`,
+                    label: `${movie.l}`,
                 }
             })
         }
