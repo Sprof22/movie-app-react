@@ -4,8 +4,6 @@ import "./App.css";
 import { OMDB_API_KEY, OMDB_API_URL } from "./api";
 import MovieList from "./components/MovieList";
 
-import SearchAsync from "./components/SearchAsync";
-
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchInput, setSearchInput] =useState('')
