@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBox = (props) => {
+const Search = (props) => {
 	return (
 		<div className='col col-sm-4'>
 			<input
@@ -13,4 +13,4 @@ const SearchBox = (props) => {
 	);
 };
 
-export default SearchBox;
+export default Search;
