@@ -7,7 +7,7 @@ const Search = ({ onSearchChange }) => {
   const [search, setSearch] = useState(null);
 
   const loadOptions = (inputValue) => {
-    return fetch(`${GEO_API_URL}/auto-complete?q=${inputValue}`, geoApiOptions)
+    return fetch(`${GEO_API_URL}/auto-complete?s=${inputValue}`, geoApiOptions)
       .then((response) => response.json())
       .then((response) => {
         return {
