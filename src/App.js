@@ -4,7 +4,7 @@ import "./App.css";
 import { OMDB_API_KEY, OMDB_API_URL } from "./api";
 import MovieList from "./components/MovieList";
 
-import Search from "./components/Search";
+import SearchAsync from "./components/SearchAsync";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -29,7 +29,7 @@ const App = () => {
     <div className="container-fluid full-page">
       <div className="row d-flex justify-content-space between gap-3">
       <div className="heading col-8 mt-2">Movie APP</div>
-      <div className="bg-danger col-4 m-0 mt-2"><Search onSearchChange={handleOnSearchChange}/></div>
+      <div className="bg-danger col-4 m-0 mt-2"><SearchAsync onSearchChange={handleOnSearchChange}/></div>
       
       </div>
       <div className="d-flex">
