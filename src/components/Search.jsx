@@ -9,7 +9,16 @@ const Search = ({ onSearchChange }) => {
   const loadOptions = (inputValue) => {
     return fetch(`${GEO_API_URL}/auto-complete?q=${inputValue}`, geoApiOptions)
       .then((response) => response.json())
-      .then((response) => console.log(response))
+      .then((response) => {
+        return {
+            options: response.d.map((movie)=> {
+                return {
+                    value: ``,
+                    label: ``,
+                }
+            })
+        }
+    })
       .catch((err) => console.error(err));
   };
 
