@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import MovieCard from "./components/MovieCard";
+import NavHeader from "./components/NavHeader";
 import './styles/style.css'
 
 // import './style.css'
@@ -86,45 +87,7 @@ const Main = () => {
   return (
     <>
       <div className={navbarClasses.join(" ")}>
-        <div className="header">
-          <img src="images/movie-icon.png" alt="logo" className="w-15 h-12 cursor-pointer" />
-          <nav>
-            <ul>
-              {arr.map((value) => {
-                return (
-                  <li>
-                    <a
-                      href="#"
-                      name={value}
-                      onClick={(e) => {
-                        getData(e.target.name);
-                      }}
-                    >
-                      {value}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-          <form>
-            <div className="search-btn">
-              <input
-                type="text"
-                placeholder="Enter Movie Name"
-                className="inputText"
-                onChange={(e) => {
-                  setSearch(e.target.value);
-                }}
-                value={search}
-                onKeyPress={searchMovie}
-              />
-              <button type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-          </form>
-        </div>
+        <NavHeader search={search} arr={arr} setSearch={setSearch} searchMovie={searchMovie} getData={getData}/>
       </div>
       <div className="container">
         {movieData.length == 0 ? (
