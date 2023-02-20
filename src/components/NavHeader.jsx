@@ -10,7 +10,7 @@ const NavHeader = ({search}, {arr}, {getData}, {searchMovie}, {setSearch}) => {
                 return (
                   <li>
                     <a
-                      href="#"
+                      href="/"
                       name={value}
                       onClick={(e) => {
                         getData(e.target.name);
