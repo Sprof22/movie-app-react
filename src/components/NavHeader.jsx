@@ -1,8 +1,8 @@
 import React from 'react'
 
-const NavHeader = ({search} ) => {
+const NavHeader = ({search}, {arr}, {getData}, {searchMovie}, {setSearch}) => {
   return (
-    <div><div className="header">
+    <div className="header">
           <img src="images/movie-icon.png" alt="logo" className="w-15 h-12 cursor-pointer" />
           <nav>
             <ul>
@@ -40,7 +40,7 @@ const NavHeader = ({search} ) => {
               </button>
             </div>
           </form>
-        </div></div>
+        </div>
   )
 }
 

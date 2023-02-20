@@ -87,7 +87,7 @@ const Main = () => {
   return (
     <>
       <div className={navbarClasses.join(" ")}>
-        <NavHeader search={search} arr={arr} setSearch={setSearch} searchMovie={searchMovie} getData={getData}/>
+      <NavHeader search={search} arr={arr} setSearch={setSearch} searchMovie={searchMovie} getData={getData}/>
       </div>
       <div className="container">
         {movieData.length == 0 ? (
