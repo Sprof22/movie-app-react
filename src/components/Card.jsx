@@ -1,12 +1,12 @@
 import React from "react";
 
-const MovieCard = (movie) => {
+const Card = (movie) => {
   console.log(movie.info);
   let img_path = "https://image.tmdb.org/t/p/w500";
   return (
     <>
       <div className="movie">
-        <img src={img_path + movie.info.poster_path} className="poster" />
+        <img src={img_path + movie.info.poster_path} alt='rep' className="poster" />
         <div className="movie-details">
           <div className="box">
             <h4 className="title font-bold">{movie.info.title}</h4>
@@ -16,7 +16,7 @@ const MovieCard = (movie) => {
             Released: {movie.info.release_date}
           </h6>
 
-          <div className="overlay">
+          <div className="overview">
             <h1 className="font-bold text-2xl underline">Overview</h1>
             <div className="text-sm">{movie.info.overview}</div>
           </div>
@@ -26,4 +26,4 @@ const MovieCard = (movie) => {
   );
 };
 
-export default MovieCard;
+export default Card;
