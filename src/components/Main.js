@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Card from "./Card";
+import MovieCard from "./MovieCard";
 
 
 // let API_keys = "&api_key=1189e19e4888756b7edb9a1346371528";
@@ -197,7 +197,7 @@ const Main = () => {
           <p className="text-2xl font-bold text-red-900">Opps!!! Not found☹️</p>
         ) : (
           movieData.map((res, pos) => {
-            return <Card info={res} key={pos} />;
+            return <MovieCard info={res} key={pos} />;
           })
         )}
       </div>
